@@ -1,13 +1,8 @@
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import { useRoutes } from 'react-router-dom'
+import routes from './routes'
 
 export default function App() {
-  return (
-    <div className='flex flex-col items-center w-full min-h-screen bg-gray-200'>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  )
+  const element = useRoutes(routes)
+
+  return <>{element}</>
 }

@@ -1,25 +1,27 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Challenge() {
+export default function Challenge(props) {
+  const { title, path } = props
+
   return (
     <div className='p-2 basis-1/3'>
       <div className='flex flex-col items-center overflow-hidden border border-gray-300 border-solid rounded-md'>
         <div className='overflow-hidden'>
-          <a href='#'>
+          <Link to={path}>
             <img
               src='https://via.placeholder.com/700x513'
               alt=''
               className='transition ease-in-out duration-0 hover:scale-125 hover:duration-150'
             />
-          </a>
+          </Link>
         </div>
 
         <div className='w-full bg-gray-100'>
-          <a href='#' className='hover:underline'>
+          <Link to={path} className='hover:underline'>
             <h2 className='my-4 text-2xl text-center text-gray-800 md:text-xl'>
-              Lorem ipsum dolor sit amet.
+              {title}
             </h2>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
