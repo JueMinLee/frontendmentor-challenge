@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 export default function Challenge(props) {
-  const { title, path } = props
+  const { title, path, thumbnail } = props
 
   return (
     <div className='p-2 basis-1/3'>
@@ -9,8 +9,8 @@ export default function Challenge(props) {
         <div className='overflow-hidden'>
           <Link to={path}>
             <img
-              src='https://via.placeholder.com/700x513'
-              alt=''
+              src={thumbnail}
+              alt={title}
               className='transition ease-in-out duration-0 hover:scale-125 hover:duration-150'
             />
           </Link>
